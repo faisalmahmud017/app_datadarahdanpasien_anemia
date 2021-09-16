@@ -1,4 +1,4 @@
-# Aplikasi Data Darah dan Pasien Anemia berbasis Java Desktop
+# Aplikasi Data Darah dan Pasien Anemia Berbasis Java Desktop
 - dirancang dengan Netbeans 8.2
 - database -> MySql <br/>
 menggunakan Library Ireport untuk mencetak laporan

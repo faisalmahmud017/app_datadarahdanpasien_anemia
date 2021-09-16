@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f03a5dba-537c-45be-9816-3d489c09be02">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from pasien]]>
+	</queryString>
+	<field name="nik" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jen_kel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_lahir" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_tlp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gol_darah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_treatment" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="3716b70b-612e-4f0f-9ccb-cea51db81719" x="0" y="0" width="555" height="79" backcolor="#333333"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="91aad612-51a3-4e26-82d1-1d2330b8b684" x="98" y="7" width="383" height="32" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[YAYASAN THALASSAEMIA INDONESIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4371e6e5-154b-4ffd-80d3-31d2c9ef5c01" x="219" y="39" width="118" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA PASIEN]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="9b247a54-2c57-49b2-b2a9-6f0220244941" x="18" y="7" width="62" height="52"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Desktop\\New folder\\app_datadarahdanpasien_anemia\\src\\icon\\icon app~1-jpg.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement uuid="34f42aeb-f0a5-4da3-884c-772541a3c119" x="397" y="0" width="158" height="23"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e4274303-54b9-4e80-a848-ec5a42a7d259" mode="Opaque" x="0" y="0" width="67" height="20" backcolor="#FFFF00"/>
+				<textElement/>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="30c11ab2-c5d4-435b-a2b2-f5ce0fe08176" mode="Opaque" x="67" y="0" width="78" height="20" backcolor="#FFFF00"/>
+				<textElement/>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bae28a68-4019-4034-a782-62dec7cd48de" mode="Opaque" x="207" y="0" width="72" height="20" backcolor="#FFFF00"/>
+				<textElement/>
+				<text><![CDATA[TGL LAHIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c5a975f5-db49-4b91-a0ff-ebab9891e8b7" mode="Opaque" x="279" y="0" width="58" height="20" backcolor="#FFFF00"/>
+				<textElement/>
+				<text><![CDATA[ALAMAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c5a975f5-db49-4b91-a0ff-ebab9891e8b7" mode="Opaque" x="337" y="0" width="72" height="20" backcolor="#FFFF00"/>
+				<textElement/>
+				<text><![CDATA[No. TLP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c5a975f5-db49-4b91-a0ff-ebab9891e8b7" mode="Opaque" x="409" y="0" width="72" height="20" backcolor="#FFFF00"/>
+				<textElement/>
+				<text><![CDATA[GOL DARAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77bd03bf-be19-4728-8bf5-27f8631ab131" mode="Opaque" x="145" y="0" width="62" height="20" backcolor="#FFFF00"/>
+				<textElement/>
+				<text><![CDATA[GENDER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c5a975f5-db49-4b91-a0ff-ebab9891e8b7" mode="Opaque" x="481" y="0" width="74" height="20" backcolor="#FFFF00"/>
+				<textElement/>
+				<text><![CDATA[No TREATMENT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="9b0e662f-0089-464b-ad5a-1d41cfe9ddb1" x="0" y="0" width="67" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a0d0ce42-2f6b-4666-94a7-bb7f4d01d82e" x="67" y="0" width="78" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ff9b4da9-f317-4d78-b1fd-6f5b320a7a20" x="145" y="0" width="62" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jen_kel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="44c610f3-acb3-4c79-b28d-021d19be1e95" x="207" y="0" width="72" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tgl_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ece51876-4321-4ced-a699-936349b6f9cf" x="279" y="0" width="58" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4ac69176-1362-48c3-97c3-c549eaf8559d" x="337" y="0" width="72" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{no_tlp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c87080a1-1a07-4612-8e1f-cd29abef0d5d" x="409" y="0" width="72" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{gol_darah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c9f550ad-f16f-43b3-9130-9210ce945c1b" x="481" y="0" width="74" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{no_treatment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

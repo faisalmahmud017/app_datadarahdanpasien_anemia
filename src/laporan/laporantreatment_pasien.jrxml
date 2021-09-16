@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dda5bbe0-d407-429a-bacc-b0568b70ae21">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nom_medis" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from treatment_rekam_medis where no_rek_medis=$P{nom_medis}]]>
+	</queryString>
+	<field name="no_rek_medis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nik" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_lahir" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gol_darah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jen_kel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="berat_badan" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tinggi_badan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kadar_hb" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jml_darah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_transfusi" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_jaminan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="3716b70b-612e-4f0f-9ccb-cea51db81719" x="-2" y="0" width="557" height="79" backcolor="#333333"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="91aad612-51a3-4e26-82d1-1d2330b8b684" x="113" y="12" width="383" height="26" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[YAYASAN THALASSAEMIA INDONESIA]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="9b247a54-2c57-49b2-b2a9-6f0220244941" x="18" y="12" width="64" height="52"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Desktop\\New folder\\app_datadarahdanpasien_anemia\\src\\icon\\icon app~1-jpg.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="4371e6e5-154b-4ffd-80d3-31d2c9ef5c01" x="170" y="47" width="258" height="32" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA TREATMENT PASIEN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement uuid="34f42aeb-f0a5-4da3-884c-772541a3c119" x="382" y="0" width="172" height="23"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f049fdfd-ded3-4660-baae-77b81355e4b7" x="0" y="0" width="124" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO REKAM MEDIS :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6c1bc5ca-c466-4fc7-8a76-0462f99a3461" x="124" y="0" width="136" height="25"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_rek_medis}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="203" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="94441ad9-08f4-4df8-913b-77be38d24dac" x="0" y="0" width="100" height="26"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b5530d1b-827c-4d33-bab8-4450c1cb9c2c" x="0" y="54" width="100" height="26"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL LAHIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ed0db7ad-e318-4f7e-8960-4fdb3a6521d4" x="0" y="80" width="100" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GOL DARAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6eabf920-8ac5-4907-b4a1-40158fc54c88" x="0" y="26" width="100" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ed0db7ad-e318-4f7e-8960-4fdb3a6521d4" x="305" y="82" width="100" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JENIS JAMINAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ed0db7ad-e318-4f7e-8960-4fdb3a6521d4" x="0" y="109" width="100" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BERAT BADAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="94441ad9-08f4-4df8-913b-77be38d24dac" x="305" y="0" width="100" height="26"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KADAR HB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="94441ad9-08f4-4df8-913b-77be38d24dac" x="305" y="28" width="100" height="26"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH DARAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="94441ad9-08f4-4df8-913b-77be38d24dac" x="305" y="56" width="100" height="26"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TGL TRANSFUSI]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d16a0d18-4053-4073-a9a9-cd27709fe831" x="100" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7466a634-c313-4578-adfd-325c4e971518" x="100" y="28" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4e8c010b-fa42-48d2-bc2e-a8f6683e4301" x="113" y="60" width="121" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tgl_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="523257c0-4384-4bf9-b0eb-adacbb558299" x="100" y="90" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{gol_darah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="407987ce-abe0-4ed0-986d-575c48a12d02" x="405" y="89" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenis_jaminan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a87f8f81-7659-4393-90f5-f0209f842bcb" x="100" y="119" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{berat_badan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="08df1e91-6be1-4bcf-a468-56f1c9dbb030" x="405" y="6" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kadar_hb}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ed0db7ad-e318-4f7e-8960-4fdb3a6521d4" x="0" y="139" width="100" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TINGGI BADAN]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="091adf11-0e39-4bf1-9855-455ee11407e3" x="100" y="149" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tinggi_badan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ff28f4f9-b01e-4f1f-ae8e-5be93499e27c" x="405" y="28" width="100" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jml_darah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b7fc869a-09f2-451c-8b80-8b56f75461c2" x="417" y="62" width="100" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tgl_transfusi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
